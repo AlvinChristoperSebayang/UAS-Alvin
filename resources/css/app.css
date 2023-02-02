@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+   
+    .text-primary{
+        @apply text-[#969696] text-base;
+     }
+     .dropdown1 a:hover{
+        @apply text-[#74A512];
+      }
+   .haschild:hover .dropdown1{
+    @apply block;
+   }
+   .dropdown1:hover {
+        @apply block;
+   }
+   .makan:hover{
+     @apply hover:border-2 hover:border-black hover:rounded-md;
+   }
+   .box{
+    @apply w-full h-[3rem] bg-slate-100 m-2 rounded-md text-base text-black outline-0;
+   }
+   .show{
+    @apply block;
+   }  
+   .login{
+    right: -100%;
+    transition: all .3s ease-in-out;
+   }
+   #radio1:checked ~ .slidefirst{
+    @apply ml-0
+   }
+   #radio2:checked ~ .slidefirst{
+    @apply -ml-[20%]
+   }
+   #radio3:checked ~ .slidefirst{
+    @apply -ml-[40%]
+   }
+   #radio1:checked ~ .autonav .auto-btn1{
+    @apply bg-[#74A512]
+   }
+   #radio2:checked ~ .autonav .auto-btn2{
+    @apply bg-[#74A512]
+   }
+   #radio3:checked ~ .autonav .auto-btn3{
+    @apply bg-[#74A512]
+   }
+    }
+   @media screen and (max-width:1023px)  {
+    nav {
+            left: -100%;
+            transition: all .3s ease-in-out;
+        }
+    nav ul > li{
+        @apply w-full p-0
+
+    }
+    .makan h2{
+      @apply text-sm  
+    }
+    .makan p{
+      @apply text-xs  
+    }
+    footer ul > li {
+        @apply text-xs
+    }
+    footer h1{
+        @apply text-sm
+    }
+    footer p{
+        @apply text-xs
+    }
+
+    nav ul li a:hover,
+    nav ul li a:active{
+        color: #000;
+
+        
+    }
+
+}
